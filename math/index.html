@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math basic</title>
+</head>
+<body>
+
+    <script>
+        let lotsOfDecimal = 1.245345345345;
+        lotsOfDecimal;
+        let twoDecimalPlace = lotsOfDecimal.toFixed(2);
+        twoDecimalPlace;
+       
+      const btn = document.createElement('button');
+      btn.textContent ='Start machine';
+      document.body.append(btn);
+       const txt = document.createElement('p');
+       txt.textContent = 'The machine is stopped';
+       document.body.append(txt);
+
+       btn.addEventListener('click', updateBtn);
+
+       function updateBtn() {
+           if(btn.textContent === 'Start machine') {
+               btn.textContent = 'Stop machine';
+               txt.textContent = 'The machine has started!';
+           } else {
+               btn.textContent = 'Start machine';
+               txt.textContent = 'The machine is stopped';
+           }
+       }
+
+    </script>
+    
+</body>
+</html>
